@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Button: typeof import('./components/Button.vue')['default']
     ButtonButton: typeof import('./components/Button/Button.vue')['default']
+    'ButtonButton.stories': typeof import('./components/Button/Button.stories.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

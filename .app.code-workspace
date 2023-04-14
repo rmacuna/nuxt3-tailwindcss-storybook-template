@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "volar.action.organizeImports": true,
+      "volar.format.initialIndent": true,
+      "source.organizeImports": true
+    },
+    "volar.format.initialIndent": {
+      "html": true
+    },
+    "eslint.validate": ["javascript", "typescript"],
+    "eslint.options": {
+      "extensions": [".js", "vue", ".ts"]
+    }
+  }
+}

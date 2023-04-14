@@ -1,6 +1,6 @@
 import path from "path";
+import postcss from 'postcss';
 import { loadConfigFromFile, mergeConfig } from "vite";
-
 
 /** @type { import('@storybook/vue3-vite').StorybookConfig } */
 const config = {
@@ -21,11 +21,18 @@ const config = {
   docs: {
     autodocs: "tag",
   },
-  async viteFinal(baseConfig) {
-    console.log("baseConfig", path.resolve(__dirname, "../vite.config.ts"))
+  async viteFinal(baseConfig, { configType }) {
     const { config: userConfig } = await loadConfigFromFile(
       path.resolve(__dirname, "../vite.config.ts")
     );
+
+    if (configType === "DEVELOPMENT") {
+      baseConfig.plugins.push(
+        postcss({
+          plugins: [require('tailwindcss'), require('autoprefixer')],
+        })
+      );
+    }
 
     return mergeConfig(baseConfig, userConfig);
   },

@@ -1,7 +1,7 @@
 import { URL, fileURLToPath } from 'node:url'
-import { defineConfig } from 'vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,10 +16,11 @@ export default defineConfig({
         './components/'
         // Component folders that should be auto-imported
       ],
+      extensions: ['vue', '.stories.ts', '.stories.js'],
       dts: true,
-      directoryAsNamespace: true
+      directoryAsNamespace: true,
     })
-  ],
+  ], 
   resolve: {
     alias: {
       '~': fileURLToPath(new URL('./', import.meta.url))
