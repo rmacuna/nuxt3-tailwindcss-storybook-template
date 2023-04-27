@@ -10,7 +10,7 @@ const meta: Meta<typeof Button> = {
     components: { Button }, // Notice that `MyComponent` is not imported here
     setup: () => ({ args }),
     template: `
-      <Button class="bg-black" />
+      <Button />
     `,
   }),
 };

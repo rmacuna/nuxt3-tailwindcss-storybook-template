@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/vue3'
-import App from '~/App.vue' // Imported with '~' shorthand syntax
+import App from '~/app.vue' // Imported with '~' shorthand syntax: ;
 
 const meta: Meta<typeof App> = {
  component: App,
