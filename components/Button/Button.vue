@@ -6,4 +6,5 @@
   </div>
 </template>
 
+<!-- This change is necesesary here -->
 <script lang="ts" setup></script>
